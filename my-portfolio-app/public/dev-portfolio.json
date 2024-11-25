@@ -1,0 +1,58 @@
+{
+    "basic_info":{
+        "description_header": "Hi",
+        "description": "text...",
+        "section_name": {
+            "about": "About me",
+            "projects": "Projects",
+            "skills": "Skills",
+            "experience": "experience"
+        }
+    },
+ "projects": [
+    {
+        "title": "Oh my food",
+        "startDate": "2024",
+        "description": "What i've done...",
+        "images": [
+            
+        ],
+        "url": "",
+        "technologies": [
+            {
+                "class": "icon css for exemple",
+                "name": "CSS"
+            },
+            {
+                "class": "icon....",
+                "name": "html5"
+            }
+        ]
+    }
+],
+"skills": {
+    "icons": [
+        {
+            "name": "HTML 5",
+           "class": "devicon-html5-plain",
+          "level": "95"
+        },
+        {
+            "name": "Sass",
+            "class": "devicon-sass-original",
+            "level": "75"
+          },
+          {
+            "name": "JavaScript",
+            "class": "devicon-javascript-plain",
+            "level": "70"
+          },
+          {
+            "name": "CSS 3",
+            "class": "devicon-css3-plain",
+            "level": "95"
+          }
+    ]
+}
+}
+
