@@ -2,13 +2,12 @@ import { useState, useEffect } from "react";
 import Card from "../cards/cards";
 import Modal from "../modal/card-modal";
 
-import "./index.css";
 import "./../../index.css";
 
 function MyProjects() {
   const [projects, setProjects] = useState([]);
   const [modalData, setModalData] = useState(null);
-  
+
   const openModal = (project) => {
     setModalData(project);
   };
@@ -16,13 +15,13 @@ function MyProjects() {
   const closeModal = () => {
     setModalData(null);
   };
- 
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch("/dev-portfolio.json");
         const result = await response.json();
-        setProjects(result.projects);
+        setProjects(result.projects || []);
       } catch (error) {
         console.error("Error fetching  projects:", error);
       }
@@ -31,16 +30,16 @@ function MyProjects() {
   }, []);
 
   return (
-    <div>
-      <h2>My projects</h2>
-      <ul className="cards">
+    <div className="projects">
+      <h2 className="project-title">My projects</h2>
+      <div className="card-grid">
         {projects.map((project, index) => (
-          <li key={index}> 
-          <Card project={project} onClick={() => openModal(project)} />
-            </li>
+          <div key={index} className="card" onClick={() => openModal(project)}>
+            <Card project={project} />
+          </div>
         ))}
-        </ul>
-            {modalData && <Modal project={modalData} onClose={closeModal}/>}
+      </div>
+      {modalData && <Modal project={modalData} onClose={closeModal} />}
     </div>
   );
 }

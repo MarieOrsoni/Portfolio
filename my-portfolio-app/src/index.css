@@ -1,5 +1,250 @@
+body,
+html,
+#root {
+  width: 100%;
+  height: 100%;
+}
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+/*Header*/
+header {
+  background-color: rgb(174, 148, 79);
+  height: 50vh;
+  margin-bottom: 30px;
+}
+
+.Header-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.header-title {
+  padding: 0;
+  margin: 0;
+}
+.header-job {
+  margin-top: 0;
+}
+/*Nav bar*/
+.nav {
+  width: 98%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  position: absolute;
+  top: 15px;
+}
+.email-link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 5px 15px;
+}
+.email-link:hover {
+  color: #d7caaa;
+  font-size: larger;
+}
+/*main */
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.intro {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.job-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.message-info {
+  width: 60%;
+  border: 2px solid #d7caaa;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+/*Cards section*/
+.dark-green {
+  background-color: whitesmoke;
+  width: 100%;
+  margin-top: 30px;
+}
+.project-title {
+  text-align: center;
+}
+
+/*Modal Backdrop */
+.modal-close {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Modal Content */
+.modal-open {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: whitesmoke;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 80%;
+  max-width: 500px;
+}
+.modal-open .photo {
+  border: 10px solid #d7caaa;
+}
+.modal-open .dot.dot {
+  background-color: #d7caaa;
+}
+.modal-open .dot.dot.active {
+  background-color: #d7caaa;
+}
+
+.modal-open h2 {
+  margin-bottom: 1px;
+}
+
+.modal-open .fa-x {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #d7caaa;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+/* Style your cards */
+.cards {
+  background: white;
+  margin-bottom: 30px;
+  padding: 20px;
+
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  width: calc (33.33% - 30px);
+  max-width: 300px;
+  text-align: center;
+  border: 2px solid;
+}
+.photo {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.cards-title {
+  margin: 10px 0;
+}
+.cards-description,
+.cards-date {
+  margin: 10px 0;
+}
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+.fa-chevron-left,
+.fa-chevron-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+.fa-chevron-left {
+  left: 5px;
+}
+.fa-chevron-right {
+  right: 5px;
+}
+.pagination-dots {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -10px;
+}
+.pagination-dots .dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: green;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+.pagination-dots .dot.active {
+  background-color: green;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: none;
+}
+/* Responsive layout adjustments */
+@media (min-width: 1100px) {
+  .card-grid {
+    flex-direction: row;
+  }
+  .card {
+    flex: 0 1 calc(40% - 30px);
+  }
+  .nav {
+    font-size: 30px;
+  }
+  .header-title {
+    font-size: 60px;
+  }
+  .header-job {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1099px) {
+  .card {
+    flex: 0 1 calc(50% - 30px);
+  }
+}
+@media (max-width: 699px) {
+  .card {
+    flex: 0 1 100%;
+  }
 }
