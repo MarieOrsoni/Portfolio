@@ -56,22 +56,32 @@
       {
         "name": "HTML5",
         "class": "devicon-html5-plain",
-        "level": "95"
+        "level": "95",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg"
+      },
+      {
+        "name": "React JS",
+        "class": "devicon-react-original colored",
+        "level": "75",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg"
       },
       {
         "name": "Sass",
-        "class": "devicon-sass-original",
-        "level": "75"
+        "class": "devicon-sass-original colored",
+        "level": "75",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg"
       },
       {
         "name": "JavaScript",
-        "class": "devicon-javascript-plain",
-        "level": "70"
+        "class": "ddevicon-javascript-plain colored",
+        "level": "70",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
       },
       {
         "name": "CSS 3",
-        "class": "devicon-css3-plain",
-        "level": "95"
+        "class": "devicon-css3-plain-wordmark colored",
+        "level": "95",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg"
       }
     ]
   }

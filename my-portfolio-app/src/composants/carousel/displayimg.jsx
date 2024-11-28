@@ -25,27 +25,30 @@ function Carousel({ images, title }) {
 
   return (
     <div className="carousel">
-      <i
-        className="fa-solid fa-chevron-left"
-        onClick={(e) => {
-          e.stopPropagation();
-          goToPrev();
-        }}
-      ></i>
+      {totalImages > 1 && (
+        <i
+          className="fa-solid fa-chevron-left"
+          onClick={(e) => {
+            e.stopPropagation();
+            goToPrev();
+          }}
+        ></i>
+      )}
 
       <img
         className="photo"
         src={images[currentIndex]}
         alt={`${title} ${currentIndex + 1}`}
       />
-
-      <i
-        className="fa-solid fa-chevron-right"
-        onClick={(e) => {
-          e.stopPropagation();
-          goToNext();
-        }}
-      ></i>
+      {totalImages > 1 && (
+        <i
+          className="fa-solid fa-chevron-right"
+          onClick={(e) => {
+            e.stopPropagation();
+            goToNext();
+          }}
+        ></i>
+      )}
 
       <div className="pagination-dots">
         {images.map((_, index) => (

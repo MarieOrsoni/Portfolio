@@ -2,14 +2,13 @@ import PropTypes from "prop-types";
 import Carousel from "../carousel/displayimg";
 import "../../index.css";
 
-function Card({ project, onClick }) { 
-
+function Card({ project, onClick }) {
   return (
     <div className="cards" onClick={onClick}>
       <Carousel images={project.images} title={project.title} />
       <h3 className="cards-title">{project.title}</h3>
       <p className="cards-description">{project.description}</p>
-      <p className="cards-date">Start Date: {project.startDate}</p>
+      <p className="cards-date">Date du projet: {project.startDate}</p>
     </div>
   );
 }

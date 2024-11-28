@@ -11,6 +11,7 @@ function Modal({ project, onClose }) {
       ></div>
 
       <div className="modal-open">
+        <i className="fa-solid fa-x" onClick={onClose}></i>
         <Carousel images={project.images} title={project.title} />
         <h2>{project.title}</h2>
 
@@ -20,7 +21,6 @@ function Modal({ project, onClose }) {
             <li key={index}>{tech.name}</li>
           ))}
         </ul>
-        <i className="fa-solid fa-x" onClick={onClose}></i>
       </div>
     </>
   );
