@@ -6,7 +6,7 @@ import BottomPage from "./composants/Footer/footer";
 function App() {
   return (
     <>
-      <header className="page">
+      <header>
         <IntroHeader />
       </header>
       <main>

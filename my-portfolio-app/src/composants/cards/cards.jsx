@@ -8,7 +8,6 @@ function Card({ project, onClick }) {
       <Carousel images={project.images} title={project.title} />
       <h3 className="cards-title">{project.title}</h3>
       <p className="cards-description">{project.description}</p>
-      <p className="cards-date">Date du projet: {project.startDate}</p>
     </div>
   );
 }

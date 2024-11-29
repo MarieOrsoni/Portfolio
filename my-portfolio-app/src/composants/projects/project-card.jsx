@@ -7,21 +7,31 @@ import "./../../index.css";
 function MyProjects() {
   const [projects, setProjects] = useState([]);
   const [modalData, setModalData] = useState(null);
+  const [isModalVisible, setModalVisible] = useState(false);
 
   const openModal = (project) => {
     setModalData(project);
+    setModalVisible(true);
   };
 
   const closeModal = () => {
     setModalData(null);
+    setModalVisible(false);
   };
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/dev-portfolio.json");
+        const response = await fetch("./dev-portfolio.json");
         const result = await response.json();
-        setProjects(result.projects || []);
+
+        const updatedProjects = (result.projects || []).map((project) => ({
+          ...project,
+          skills: project.skills.map((id) =>
+            result.skills.find((skill) => skill.id === id)
+          ),
+        }));
+        setProjects(updatedProjects);
       } catch (error) {
         console.error("Error fetching  projects:", error);
       }
@@ -31,7 +41,7 @@ function MyProjects() {
 
   return (
     <div className="projects">
-      <h2 className="project-title">My projects</h2>
+      <h2 className="project-title">Mes projets</h2>
       <div className="card-grid">
         {projects.map((project, index) => (
           <div key={index} className="card" onClick={() => openModal(project)}>
@@ -39,7 +49,13 @@ function MyProjects() {
           </div>
         ))}
       </div>
-      {modalData && <Modal project={modalData} onClose={closeModal} />}
+      {modalData && (
+        <Modal
+          project={modalData}
+          onClose={closeModal}
+          isVisible={isModalVisible}
+        />
+      )}
     </div>
   );
 }
