@@ -28,7 +28,7 @@ ul li {
 /*Header*/
 header {
   background-color: #ede5d3;
-  height: 25vh;
+  height: 15vh;
 }
 
 .Header-container {
@@ -97,7 +97,40 @@ main {
   text-align: center;
 }
 
-/*Modal Backdrop */
+/*Modal  */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90%;
+  width: 90%;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1001;
+}
+.modal-backdrop.show {
+  opacity: 1;
+}
+.modal-backdrop.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .modal-close {
   position: fixed;
   top: 0;
@@ -141,9 +174,11 @@ main {
 .modal-open h2 {
   margin-bottom: 1px;
   text-align: center;
+  padding-top: 5px;
 }
 .modal-open p {
   text-align: center;
+  padding-bottom: 10px;
 }
 .modal-open .fa-x {
   position: fixed;
@@ -159,31 +194,28 @@ main {
 .modal-open .carousel {
   margin-top: 10px;
 }
-/* modal transition*/
-.modale.show {
-  display: flex;
-  animation: fadeIn 0.5s forwards;
+.listTechModal {
+  padding-left: 10px;
+  margin: 10px 0;
 }
-.modal.hide {
-  display: flex;
-  animation: fadeOut 0.5s forwards;
+.listTechModal li {
+  margin-bottom: 5px;
+  list-style: disc;
 }
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.project-link {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #d7caaa;
+  padding: 10px;
+  border-radius: 10px;
 }
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+
+.project-link:hover {
+  text-decoration: underline;
+  color: black;
 }
+
 /* Style your cards */
 .card-grid {
   display: flex;
@@ -209,6 +241,7 @@ main {
 }
 .cards-title {
   margin: 10px 0;
+  padding-top: 10px;
 }
 .cards-description,
 .cards-date {
@@ -220,7 +253,7 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   margin: auto;
 }
 .fa-chevron-left,
@@ -243,13 +276,14 @@ main {
   bottom: -10px;
 }
 .pagination-dots .dot {
-  height: 12px;
-  width: 4px;
+  height: 10px;
+  width: 10px;
   margin: 0 5px;
   background-color: white;
   border-radius: 50%;
   cursor: pointer;
   border: 1px solid #ad8b39;
+  transition: background-color 0.3s;
 }
 .pagination-dots .dot.active {
   border: none;

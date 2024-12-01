@@ -20,8 +20,19 @@
         "foto/ohmf_computer.jpg"
       ],
       "url": "https://marieorsoni.github.io/P4-Ohmyfood",
-      "technologies": [{ "name": "" }, { "name": "" }],
-      "skills": [1, 5]
+      "technologies": [
+        {
+          "name": "Dans ce projet j’ai découpée la maquette figma pour comprendre le fonctionnalités du site."
+        },
+        { "name": "Le site a été intégré en version mobile first " },
+        {
+          "name": "J’ai créé  et mis en place des animations en CSS, un loader, le cœur des favoris et la sélection des plats pour l’interaction les utilisateurs."
+        },
+        {
+          "name": "La fiche de style a été écrite en SASS rendant le code réutilisable avec les thèmes."
+        }
+      ],
+      "skills": [1, 3, 5]
     },
     {
       "title": "Kasa",
@@ -35,9 +46,51 @@
         "foto/kasa_pc.jpg",
         "foto/kasaApt.jpg"
       ],
-      "url": "",
-      "technologies": [{ "name": "" }],
-      "skills": [2, 5]
+      "url": "https://github.com/MarieOrsoni/P7-Kasa",
+      "technologies": [
+        {
+          "name": "Dans ce projet j’ai intégré une maquette figma sur une application  React JS."
+        },
+        {
+          "name": "J’ai découpé la maquette en réfléchissant aux composants et leur interaction."
+        },
+        {
+          "name": "J’ai créé  et structuré une application avec React JS Vite."
+        },
+        {
+          "name": "J’ai créé un React Router pour gérer la navigation du site."
+        },
+        {
+          "name": "J’ai simulé le code pour les appels d’api pour récupérer les  données d’un dossier JSON."
+        }
+      ],
+      "skills": [2, 3, 5]
+    },
+    {
+      "title": "Sophie Bluel Architecte",
+      "startDate": "2024",
+      "description": "Créez une page web dynamique avec JavaScript",
+      "images": [
+        "foto/SophieBluel.jpg",
+        "foto/SBAdmpage.jpg",
+        "foto/SBmodal.jpg",
+        "foto/SBmodalAjout.jpg",
+        "foto/SBmodalphoto.jpg"
+      ],
+      "url": "https://github.com/MarieOrsoni/P6_Architecte_Bluel_Sophie",
+      "technologies": [
+        {
+          "name": "Afficher la galerie des travaux dynamiquement avec les données du backend"
+        },
+        { "name": "Créer un filtre pour la galerie" },
+        { "name": "Utiliser la méthode Fetch pour faire les appels à l’api" },
+        { "name": "Créer un modal de login et gérer les tokens avec Fetch" },
+        {
+          "name": "Créer un modal pour que l’administrateur puisse ajouter et enlever les travaux dans l’api"
+        },
+        { "name": "Gérer la déconnexion de la page administrateur" }
+      ],
+      "skills": [4, 5, 1]
     }
   ],
   "skills": [

@@ -5,7 +5,7 @@ function NavBar() {
     <nav className="nav">
       {" "}
       <a href="mailto:m.orsoni20220@gmail.com" className="email-link">
-        Contact
+      <i className="fa-regular fa-envelope"></i> Contact
       </a>{" "}
     </nav>
   );

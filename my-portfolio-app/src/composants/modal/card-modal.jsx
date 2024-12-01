@@ -4,43 +4,78 @@ import "./../../index.css";
 import { useEffect, useState } from "react";
 
 function Modal({ project, onClose, isVisible }) {
-  const [animationClass, setAnimationClass] = useState('');
+  const [animationClass, setAnimationClass] = useState("");
 
-  useEffect(()=> {
+  useEffect(() => {
     if (isVisible) {
-      setAnimationClass('show');
+      setAnimationClass("show");
     } else {
-      setAnimationClass('hide');
-      setTimeout(()=> onClose(), 500);
+      setAnimationClass("hide");
     }
-  }, [isVisible, onClose]);
+  }, [isVisible]);
+
+  function closeModal() {
+    setAnimationClass("hide");
+    setTimeout(() => onClose(), 500);
+  }
+
+  function handleBackdropClick(event) {
+    if (event.target.classList.contains("modal-backdrop")) {
+      closeModal();
+    }
+  }
+
+  if (!isVisible && animationClass === "hide") {
+    return null;
+  }
 
   return (
-    <div className={`modal ${animationClass}`}>
-      <div className="modal-close" onClick={()=> setAnimationClass('hide')}>&times;</div>
+    <div
+      className={`modal-backdrop ${animationClass}`}
+      onClick={handleBackdropClick}
+    >
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <div className="modal-close" onClick={closeModal}>
+          &times;
+        </div>
 
-      <div className="modal-open">
-        <i className="fa-solid fa-x" onClick={onClose}></i>
-        <Carousel images={project.images} title={project.title} />
-        <h2>{project.title}</h2>
-        <p>{project.description}</p>
-        {project.technologies && project.technologies.length > 0 && (
-          <ul>
-            {project.technologies.map((tech, index) => (
-              <li key={index}>{tech.name}</li>
-            ))}
-          </ul>
-        )}
-        {project.skills && (
-          <ul>
-            {project.skills.map((skill, index) => (
-              <li key={index}>
-                <i className={skill.class}></i>
-                {skill.name}
-              </li>
-            ))}
-          </ul>
-        )}
+        <div className="modal-open">
+          <i className="fa-solid fa-x" onClick={onClose}></i>
+          <Carousel images={project.images} title={project.title} />
+          <h2>{project.title}</h2>
+          <p>{project.description}</p>
+
+          {project.url && (
+            <p>
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                View Project
+              </a>
+            </p>
+          )}
+          
+          {project.technologies && project.technologies.length > 0 && (
+            <ul className="listTechModal">
+              {project.technologies.map((tech, index) => (
+                <li key={index}>{tech.name}</li>
+              ))}
+            </ul>
+          )}
+          {project.skills && (
+            <ul>
+              {project.skills.map((skill, index) => (
+                <li key={index}>
+                  <i className={skill.class}></i>
+                  {skill.name}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -52,6 +87,7 @@ Modal.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     images: PropTypes.arrayOf(PropTypes.string).isRequired,
+    url: PropTypes.string,
     technologies: PropTypes.arrayOf(
       PropTypes.shape({
         name: PropTypes.string.isRequired,
