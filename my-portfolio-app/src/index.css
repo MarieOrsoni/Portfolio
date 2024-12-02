@@ -114,9 +114,9 @@ main {
   background-color: #d7caaa;
   border-radius: 10px;
   display: flex;
-
   flex-direction: row;
   align-items: center;
+  cursor: pointer;
 }
 
 /*Modal  */

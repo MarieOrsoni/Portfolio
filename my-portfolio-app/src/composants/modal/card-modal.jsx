@@ -53,11 +53,11 @@ function Modal({ project, onClose, isVisible }) {
                 rel="noopener noreferrer"
                 className="project-link"
               >
-                View Project
+                Voir le projet
               </a>
             </p>
           )}
-          
+
           {project.technologies && project.technologies.length > 0 && (
             <ul className="listTechModal">
               {project.technologies.map((tech, index) => (

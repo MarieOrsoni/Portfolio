@@ -14,6 +14,13 @@ const Skills = ({ setSelectedSkill, selectedSkill }) => {
   return (
     <div className="filter-container">
       <div className="filters">
+        <div
+          className={`skill-item ${selectedSkill === null ? "active" : ""}`}
+          onClick={() => setSelectedSkill(null)}
+        >
+          {" "}
+          Tous
+        </div>
         {skills.map((skill) => (
           <div
             key={skill.id}
