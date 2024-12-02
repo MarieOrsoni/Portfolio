@@ -66,7 +66,7 @@ function Modal({ project, onClose, isVisible }) {
             </ul>
           )}
           {project.skills && (
-            <ul>
+            <ul className="skill-icons">
               {project.skills.map((skill, index) => (
                 <li key={index}>
                   <i className={skill.class}></i>

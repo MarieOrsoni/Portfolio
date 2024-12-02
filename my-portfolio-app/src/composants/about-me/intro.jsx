@@ -3,7 +3,7 @@ import "../../index.css";
 function AboutMe() {
   return (
     <>
-      <h1>A propos</h1>
+      <h1 className="message-header">A propos</h1>
 
       <div className="message-info">
         <p className="message">
