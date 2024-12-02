@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
-const Skills = () => {
+const Skills = ({ setSelectedSkill, selectedSkill }) => {
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
@@ -10,13 +11,17 @@ const Skills = () => {
       .catch((error) => console.error("Error fetching skills data:", error));
   }, []);
 
-  const filteredSkills = skills.filter((skill) => skill.name.toLowerCase());
   return (
     <div className="filter-container">
-      <h2>Compétences </h2>
       <div className="filters">
-        {filteredSkills.map((skill) => (
-          <div key={skill.id} className="skill-item">
+        {skills.map((skill) => (
+          <div
+            key={skill.id}
+            className={`skill-item ${
+              selectedSkill === skill.name ? "active" : ""
+            }`}
+            onClick={() => setSelectedSkill(skill.name)}
+          >
             <i className={skill.class}></i>
             <p>{skill.name}</p>
           </div>
@@ -24,5 +29,9 @@ const Skills = () => {
       </div>
     </div>
   );
+};
+Skills.propTypes = {
+  setSelectedSkill: PropTypes.func.isRequired,
+  selectedSkill: PropTypes.string,
 };
 export default Skills;
