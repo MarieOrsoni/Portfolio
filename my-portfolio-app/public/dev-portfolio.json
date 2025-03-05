@@ -1,7 +1,7 @@
 {
   "info": {
     "description_header": "Web developer",
-    "description": "Développeuse Front End",
+    "description": "Développeuse Full stack",
     "section_name": {
       "about": "About me",
       "projects": "Projects",
@@ -67,7 +67,7 @@
       "skills": [2, 3, 5]
     },
     {
-      "title": "Sophie Bluel Architecte",
+      "title": "Sophie Bluel",
       "startDate": "2024",
       "description": "Créez une page web dynamique avec JavaScript",
       "images": [

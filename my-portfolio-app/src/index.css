@@ -24,11 +24,12 @@ ul li {
   margin-left: 0;
   padding-left: 0;
 }
+/*Themes*/
 
 /*Header*/
 header {
   background-color: #ede5d3;
-  height: 15vh;
+  /*height: 15vh;*/
 }
 
 .Header-container {
@@ -195,7 +196,7 @@ main {
   border: 1px solid #ad8b39;
 }
 .modal-open .dot.dot.active {
-  border: none;
+  border: 1px solid transparent;
   background-color: #d7caaa;
 }
 
@@ -251,21 +252,24 @@ main {
 }
 
 /* Style your cards */
-.card-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0 20px;
-  gap: 20px;
+.card {
+  width: 90%;
+  margin: 0 auto;
 }
 
 .cards {
+  max-width: 100%;
+  width: 100%;
   background: white;
   padding: 10px;
-  height: 350px;
+  min-height: 350px;
+  height: auto;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
   border-radius: 5px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
 }
 .photo {
   height: 200px;
@@ -276,8 +280,12 @@ main {
   border-radius: 10px 10px 0px 0px;
 }
 .cards-title {
-  margin: 20px 0;
+  margin: 15px 0 5px;
   padding-top: 10px;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .cards-description,
 .cards-date {
@@ -312,6 +320,8 @@ main {
   bottom: -10px;
 }
 .pagination-dots .dot {
+  all: unset;
+  display: inline-block;
   height: 10px;
   width: 10px;
   margin: 0 5px;
@@ -322,7 +332,8 @@ main {
   transition: background-color 0.3s;
 }
 .pagination-dots .dot.active {
-  border: none;
+  display: inline-block;
+  border: 1px solid transparent;
   background-color: #d7caaa;
   border-radius: 50%;
 }
@@ -343,13 +354,6 @@ footer {
 }
 /* Responsive layout adjustments */
 @media (min-width: 1100px) {
-  .card-grid {
-    flex-direction: row;
-  }
-  .card {
-    flex: 0 1 calc(40% - 30px);
-    min-width: 500px;
-  }
   .modal-open .photo {
     height: 300px;
   }
@@ -366,10 +370,6 @@ footer {
 }
 
 @media (min-width: 700px) and (max-width: 1099px) {
-  .card {
-    flex: 0 1 calc(50% - 30px);
-    min-width: 500px;
-  }
   .modal-open .photo {
     height: 250px;
   }
@@ -378,9 +378,6 @@ footer {
   }
 }
 @media (max-width: 699px) {
-  .card {
-    flex: 0 1 100%;
-  }
   .modal-open .photo {
     height: 250px;
     margin-top: 30px;

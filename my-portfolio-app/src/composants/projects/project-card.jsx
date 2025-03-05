@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import Card from "../cards/cards";
 import Modal from "../modal/card-modal";
 import Skills from "../filters/filter";
@@ -62,13 +63,22 @@ function MyProjects() {
           selectedSkill={selectedSkill}
         />
       </div>
-      <div className="card-grid">
-        {filteredProjects.map((project, index) => (
-          <div key={index} className="card" onClick={() => openModal(project)}>
-            <Card project={project} />
-          </div>
-        ))}
-      </div>
+      <ResponsiveMasonry
+        className="masonry-grid"
+        columnsCountBreakPoints={{ 480: 1, 767: 2, 1200: 3, 1400: 3 }}
+      >
+        <Masonry gutter="20px">
+          {filteredProjects.map((project, index) => (
+            <div
+              key={index}
+              className="card"
+              onClick={() => openModal(project)}
+            >
+              <Card project={project} />
+            </div>
+          ))}
+        </Masonry>
+      </ResponsiveMasonry>
       {modalData && (
         <Modal
           project={modalData}

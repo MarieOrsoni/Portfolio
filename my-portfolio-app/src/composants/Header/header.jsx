@@ -8,7 +8,7 @@ function IntroHeader() {
       <NavBar />
       <h1 className="header-title">Orsoni Marie</h1>
       <h2 className="header-job">Freelance</h2>
-      <h3 className="header-job">Développeuse Front End</h3>
+      <h3 className="header-job">Développeuse web - Full stack</h3>
     </header>
   );
 }

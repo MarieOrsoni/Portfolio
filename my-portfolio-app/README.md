@@ -5,7 +5,7 @@ $ npm run dev
 example :  my-portfolio-app@0.0.0 dev
 $ npm run dev
 
-
+For cases of memory lapses: npm packages like masonry to be added in my-portfolio-app 
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
