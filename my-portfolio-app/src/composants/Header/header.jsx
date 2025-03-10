@@ -1,14 +1,26 @@
-import NavBar from "../nav-bar/navBar";
-
+import { useEffect, useState } from "react";
 import "../../index.css";
 
 function IntroHeader() {
+  const text = "Developper Web";
+  const [letters, setLetters] = useState([]);
+
+  useEffect(() => {
+    setLetters(text.split(""));
+  }, []);
+
   return (
     <header className="Header-container">
-      <NavBar />
-      <h1 className="header-title">Orsoni Marie</h1>
-      <h2 className="header-job">Freelance</h2>
-      <h3 className="header-job">Développeuse web - Full stack</h3>
+      <h1 className="header-job">
+        {letters.map((char, index) => (
+          <span
+            key={index}
+            style={{ animationDelay: `${0.1 + index * 0.01}s` }}
+          >
+            {char}
+          </span>
+        ))}
+      </h1>
     </header>
   );
 }
