@@ -3,9 +3,9 @@ import "../../index.css";
 function AboutMe() {
   return (
     <>
-      <h2 className="message-header">A propos</h2>
-
       <div className="message-info">
+        <h2 className="message-header">A propos</h2>
+
         <p className="message">
           Passionnée par l’intégration de sites web et le développement de
           fonctionnalités personnalisées, je m’adapte aux demandes spécifiques

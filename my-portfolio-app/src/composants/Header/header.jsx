@@ -15,9 +15,9 @@ function IntroHeader() {
         {letters.map((char, index) => (
           <span
             key={index}
-            style={{ animationDelay: `${0.1 + index * 0.01}s` }}
+            style={{ animationDelay: `${1.25 + index * 0.02}s` }}
           >
-            {char}
+            {char === " " ? "\u00A0" : char}
           </span>
         ))}
       </h1>

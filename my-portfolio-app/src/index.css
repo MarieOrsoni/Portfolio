@@ -3,7 +3,8 @@ body {
   margin: 0 auto 0 auto;
   display: flex;
   flex-direction: column;
-  background: radial-gradient(rgb(90, 35, 117), black);
+  min-height: 100vh;
+  background: radial-gradient(#9864c8, rgb(90, 35, 117), black);
 }
 
 h1 {
@@ -29,13 +30,17 @@ ul li {
 .Header-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
 }
 
 .header-job {
   padding-left: 30px;
+  font-family: "Fugaz One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 40px;
-  font-weight: 600;
-  color: whitesmoke;
+  color: white;
   opacity: 0;
   transform: translateX(-100vw);
   animation: slideFromLeft 2.5s ease-out forwards;
@@ -51,42 +56,27 @@ ul li {
 }
 .header-job span {
   opacity: 0;
-  transform: translateX(-10px);
-  animation: fadeInLetter 1.5s forwards;
+  transform: translateX(-10px) rotateZ(-20deg);
+  display: inline-block;
+  animation: fadeInLetter 2s ease-out forwards;
+  animation-fill-mode: both;
 }
 @keyframes fadeInLetter {
-  to {
+  50% {
+    transform: translateX(5px) rotateZ(10deg);
+  }
+  100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(0) rotateZ(0deg);
   }
 }
 
-/*Nav bar*/
-.nav {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 10px;
-  font-size: 18px;
-  position: absolute;
-  top: 15px;
-  right: 20px;
-}
-.email-link {
-  text-decoration: none;
-  font-weight: bold;
-  padding: 5px 15px;
-  color: black;
-}
-.email-link:hover {
-  border: black;
-  border-top-style: solid;
-  border-top-width: 2px;
-}
 /*main */
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 20px;
 }
 .intro {
   width: 50%;
@@ -99,13 +89,9 @@ main {
   flex-direction: column;
   align-items: center;
 }
+/*About me*/
 .message-info {
-  padding: 0 20px;
-}
-.message {
-  text-align: justify;
-  line-height: 1.5;
-  color: whitesmoke;
+  width: 40%;
 }
 .message-header {
   margin-top: 30px;
@@ -113,6 +99,12 @@ main {
   color: whitesmoke;
   font-size: 30px;
 }
+.message {
+  text-align: justify;
+  line-height: 1.5;
+  color: whitesmoke;
+}
+
 /*Cards section*/
 
 .project-title {
@@ -377,9 +369,9 @@ footer {
     height: 300px;
   }
 
-  .message-info {
+  /*.message-info {
     width: 60%;
-  }
+  }*/
   header {
     margin-right: auto;
     width: 80%;
