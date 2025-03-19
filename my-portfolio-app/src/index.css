@@ -4,7 +4,9 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: radial-gradient(#9864c8, rgb(90, 35, 117), black);
+  /*background: radial-gradient(#9864c8, rgb(90, 35, 117), black);
+  background: linear-gradient(180deg, #d8c7a0, #d3c6a6);*/
+  background: repeating-linear-gradient(300deg, #d3c6a6 4%, #c9887c42 60%);
 }
 
 h1 {
@@ -29,18 +31,20 @@ ul li {
 
 .Header-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   margin-top: 50px;
+  padding-right: 30px;
 }
 
 .header-job {
+  font-size: clamp(30px, 5vw, 60px);
   padding-left: 30px;
-  font-family: "Fugaz One", sans-serif;
-  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
   font-style: normal;
-  font-size: 40px;
+
   color: white;
+  text-shadow: 2px 2px 4px #ac9f80;
   opacity: 0;
   transform: translateX(-100vw);
   animation: slideFromLeft 2.5s ease-out forwards;
@@ -96,13 +100,13 @@ main {
 .message-header {
   margin-top: 30px;
   margin-bottom: 30px;
-  color: whitesmoke;
+  color: white;
   font-size: 30px;
 }
 .message {
   text-align: justify;
   line-height: 1.5;
-  color: whitesmoke;
+  color: white;
 }
 
 /*Cards section*/
@@ -392,5 +396,8 @@ footer {
   .modal-open .photo {
     height: 250px;
     margin-top: 30px;
+  }
+  .message-info {
+    width: 100%;
   }
 }
