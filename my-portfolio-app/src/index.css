@@ -4,9 +4,9 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /*background: radial-gradient(#9864c8, rgb(90, 35, 117), black);
-  background: linear-gradient(180deg, #d8c7a0, #d3c6a6);*/
-  background: repeating-linear-gradient(300deg, #d3c6a6 4%, #c9887c42 60%);
+  background: #e0e1e8;
+  /*background: linear-gradient(180deg, #d8c7a0, #d3c6a6);
+  background: repeating-linear-gradient(300deg, #d3c6a6 4%, #c9887c42 60%);*/
 }
 
 h1 {
@@ -43,8 +43,8 @@ ul li {
   font-weight: 700;
   font-style: normal;
 
-  color: white;
-  text-shadow: 2px 2px 4px #ac9f80;
+  color: #161748;
+  text-shadow: 2px 2px 4px #403b60;
   opacity: 0;
   transform: translateX(-100vw);
   animation: slideFromLeft 2.5s ease-out forwards;
@@ -94,14 +94,13 @@ main {
   align-items: center;
 }
 /*About me*/
+/*
 .message-info {
   width: 40%;
-}
+}*/
 .message-header {
-  margin-top: 30px;
-  margin-bottom: 30px;
   color: white;
-  font-size: 30px;
+  text-align: center;
 }
 .message {
   text-align: justify;
@@ -133,12 +132,14 @@ main {
 .skill-item {
   justify-content: space-between;
   padding: 0 10px;
-  background-color: #eee;
+  background: linear-gradient(90deg, #7c677f, #ad9cb0);
+  box-shadow: 2px 5px 5px #7c667f;
   border-radius: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
   cursor: pointer;
+  color: white;
   gap: 0.5rem;
 }
 
@@ -388,9 +389,9 @@ footer {
   .modal-open .photo {
     height: 250px;
   }
-  .message-info {
+  /* .message-info {
     width: 60%;
-  }
+  }*/
 }
 @media (max-width: 699px) {
   .modal-open .photo {
