@@ -3,9 +3,12 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import Card from "../cards/cards";
 import Modal from "../modal/card-modal";
 import Skills from "../filters/filter";
+
+import UseLanguage from "../../context/language/use-LanguageHook.jsx";
 import "./../../index.css";
 
 function MyProjects() {
+  const { language } = UseLanguage();
   const [projects, setProjects] = useState([]);
   const [modalData, setModalData] = useState(null);
   const [isModalVisible, setModalVisible] = useState(false);
@@ -28,7 +31,9 @@ function MyProjects() {
         const response = await fetch("./dev-portfolio.json");
         const result = await response.json();
 
-        const updatedProjects = (result.projects || []).map((project) => ({
+        const languageProjects = result.languages[language]?.projects || [];
+
+        const updatedProjects = languageProjects.map((project) => ({
           ...project,
           skills: project.skills.map((id) =>
             result.skills.find((skill) => skill.id === id)
@@ -40,7 +45,7 @@ function MyProjects() {
       }
     };
     fetchData();
-  }, []);
+  }, [language]);
 
   useEffect(() => {
     if (selectedSkill) {
