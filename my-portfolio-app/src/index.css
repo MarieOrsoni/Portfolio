@@ -5,9 +5,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: #e0e1e8;
-  /*background: linear-gradient(180deg, #d8c7a0, #d3c6a6);
-  background: repeating-linear-gradient(300deg, #d3c6a6 4%, #c9887c42 60%);*/
 }
 html,
 body {
@@ -36,8 +33,8 @@ ul li {
 .Header-container {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
   padding-right: 30px;
+  background: #e0e1e8;
 }
 
 .header-job {
@@ -110,18 +107,15 @@ main {
   align-items: center;
 }
 /*About me*/
-/*
-.message-info {
-  width: 40%;
-}*/
+
 .message-header {
-  color: white;
+  color: #8076a3;
   text-align: center;
+  font-size: 26px;
 }
 .message {
-  text-align: justify;
   line-height: 1.5;
-  color: white;
+  color: #8076a3;
 }
 
 /*Cards section*/
@@ -172,7 +166,7 @@ main {
   box-shadow: 4px 8px 8px #7c667f;
 }
 .skill-item.active {
-  background: linear-gradient(180deg, #ad9cb0, #958198);
+  background: linear-gradient(180deg, #b5a8b8, #958198);
   box-shadow: 4px 8px 10px #7c667f;
   transform: scale(1.07);
   font-weight: bold;
@@ -237,18 +231,18 @@ main {
   border-radius: 10px;
 }
 .modal-open .photo {
-  border: 2px solid #519464;
+  border: 2px solid #ac0649;
   border-radius: 7px;
 }
 .modal-open .dot.dot {
   background-color: white;
   border-radius: 50%;
   cursor: pointer;
-  border: 1px solid #3f734e;
+  border: 1px solid #ac0649;
 }
 .modal-open .dot.dot.active {
   border: 1px solid transparent;
-  background-color: #519464;
+  background-color: #ac0649;
 }
 
 .modal-open h2 {
@@ -353,7 +347,7 @@ main {
 }
 .fa-chevron-left,
 .fa-chevron-right {
-  color: #3f734e;
+  color: #ac0649;
   cursor: pointer;
   position: absolute;
   bottom: -10px;
@@ -379,14 +373,15 @@ main {
   background-color: white;
   border-radius: 50%;
   cursor: pointer;
-  border: 1px solid #3f734e;
+  border: 1px solid #ac0649;
   transition: background-color 0.3s;
 }
 .pagination-dots .dot.active {
   display: inline-block;
   border: 1px solid transparent;
-  background-color: #519464;
+  background-color: #ac0649;
   border-radius: 50%;
+  transform: scale(1.5);
 }
 /* Footer */
 footer {
@@ -414,7 +409,6 @@ footer {
   }*/
   header {
     margin-right: auto;
-    width: 80%;
     margin-left: auto;
     border-radius: 0 0 10px 10px;
   }
