@@ -2,8 +2,8 @@
   "languages": {
     "fr": {
       "info": {
-        "description_header": "Web developer",
-        "description": "Développeuse web - Full stack",
+        "description_header": "Développeuse web",
+        "description": "Full stack",
         "section_name": {
           "about": "A propos",
           "projects": "Projets",
@@ -99,31 +99,33 @@
           "skills": [4, 5, 1]
         }
       ]
-    }
-  },
-  "en": {
-    "info": {
-      "description_header": "Web Developer",
-      "description": "Full-stack Developer",
-      "section_name": {
-        "about": "About me",
-        "projects": "Projects",
-        "skills": "Skills",
-        "experience": "Experience"
-      }
     },
-    "projects": [
-      {
-        "projects": "Ohmyfood",
-        "startDate": "2024",
-        "description": "Create a mobile first website in HTML with CSS animations",
-        "images": [
-          "foto/omf_mobile.jpg",
-          "foto/omyf_menu_mobile.jpg",
-          "foto/ohmf_computer.jpg"
-        ]
-      }
-    ]
+
+    "en": {
+      "info": {
+        "description_header": "Web Developer",
+        "description": "Full-stack",
+        "section_name": {
+          "about": "About me",
+          "projects": "Projects",
+          "skills": "Skills",
+          "experience": "Experience",
+          "intro": "Every great digital experience starts with an idea.\nLet’s bring yours to life.\nI craft seamless and engaging websites that reflect your vision."
+        }
+      },
+      "projects": [
+        {
+          "title": "Ohmyfood",
+          "startDate": "2024",
+          "description": "Create a mobile first website in HTML with CSS animations",
+          "images": [
+            "foto/omf_mobile.jpg",
+            "foto/omyf_menu_mobile.jpg",
+            "foto/ohmf_computer.jpg"
+          ]
+        }
+      ]
+    }
   },
   "skills": [
     {

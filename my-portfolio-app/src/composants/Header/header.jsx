@@ -1,16 +1,22 @@
 import { useEffect, useState } from "react";
+import useLanguage from "../../context/language/use-LanguageHook";
+import description_header from "../../../public/dev-portfolio.json";
+import NavBar from "../nav-bar/navBar";
+
 import "../../index.css";
 
 function IntroHeader() {
-  const text = "Developper Web";
+  const { language } = useLanguage();
   const [letters, setLetters] = useState([]);
 
   useEffect(() => {
+    const text = description_header[language]?.header || "Developper Web";
     setLetters(text.split(""));
-  }, []);
+  }, [language]);
 
   return (
     <header className="Header-container">
+      <NavBar />
       <h1 className="header-job">
         {letters.map((char, index) => (
           <span

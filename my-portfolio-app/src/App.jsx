@@ -3,6 +3,7 @@ import MyProjects from "./composants/projects/project-card";
 import AboutMe from "./composants/about-me/intro";
 import BottomPage from "./composants/Footer/footer";
 
+
 function App() {
   return (
     <>

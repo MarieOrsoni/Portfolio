@@ -1,12 +1,16 @@
+import { useContext } from "react";
+import { LanguageContext } from "../../context/language/Language-context";
 import "./../../index.css";
 
 function NavBar() {
+  const { language, toggleLanguage } = useContext(LanguageContext);
+
   return (
     <nav className="nav">
-      {" "}
-      <a href="mailto:m.orsoni20220@gmail.com" className="email-link">
-      <i className="fa-regular fa-envelope"></i> Contact
-      </a>{" "}
+      <h1>{language === "fr" ? "Bienvenue" : "Welcome"}</h1>
+      <button onClick={toggleLanguage}>
+        {language === "en" ? "Switch to English" : "Passer en Francais"}
+      </button>
     </nav>
   );
 }
