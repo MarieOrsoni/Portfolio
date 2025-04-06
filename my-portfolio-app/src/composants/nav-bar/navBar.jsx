@@ -9,7 +9,7 @@ function NavBar() {
     <nav className="nav">
       <h1>{language === "fr" ? "Bienvenue" : "Welcome"}</h1>
       <button onClick={toggleLanguage}>
-        {language === "en" ? "Switch to English" : "Passer en Francais"}
+        {language === "en" ? "English" : "Francais"}
       </button>
     </nav>
   );
