@@ -22,11 +22,11 @@ export const LanguageProvider = ({ children }) => {
     const fetchContent = async () => {
       try {
         const response = await fetch("./dev-portfolio.json");
-        if (!response.ok) {
-          throw new Error("Failed to fetch translation file");
-        }
+        if (!response.ok) throw new Error("Failed to fetch translation file");
+
         const data = await response.json();
-        setContent(data);
+        console.log("Fetched data:", data);
+        setContent(data.languages[language]);
       } catch (error) {
         console.error("Language fetch error:", error);
         setContent({});

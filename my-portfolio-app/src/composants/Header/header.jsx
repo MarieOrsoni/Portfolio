@@ -1,20 +1,27 @@
-import { useEffect, useState } from "react";
-import useLanguage from "../../context/language/use-LanguageHook";
-import translations from "../../../public/dev-portfolio.json";
+import { useContext, useEffect, useState } from "react";
+import { LanguageContext } from "../../context/language/Language-context";
 import NavBar from "../nav-bar/navBar";
 
 import "../../index.css";
 
 function IntroHeader() {
-  const { language } = useLanguage();
+  const { content } = useContext(LanguageContext);
   const [letters, setLetters] = useState([]);
 
   useEffect(() => {
-    const text = translations[language]?.info?.title || "Développeuse web";
+    const text = content?.info?.title || "Développeuse web";
     setLetters(text.split(""));
-  }, [language]);
-  console.log("Current language:", language);
-  console.log("Header text:", translations[language]?.info?.title);
+  }, [content]);
+  console.log("Full context value:", useContext(LanguageContext));
+
+  console.log("Title used in header:", content?.info?.title);
+
+  console.log("Current content:", content);
+  console.log("Header text:", content?.info?.title);
+
+  useEffect(() => {
+    console.log("Updated content:", content);
+  }, [content]);
 
   return (
     <header className="Header-container">

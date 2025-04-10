@@ -4,6 +4,7 @@ import "./../../index.css";
 
 function NavBar() {
   const { language, toggleLanguage } = useContext(LanguageContext);
+  
 
   return (
     <nav className="nav">
