@@ -115,6 +115,7 @@ ul li {
   align-items: center;
   justify-content: center;
   object-fit: cover;
+  padding-left: 20px;
 }
 .btn_flags {
   background: none;
