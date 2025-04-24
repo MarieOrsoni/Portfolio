@@ -35,9 +35,10 @@ function MyProjects() {
 
         const updatedProjects = languageProjects.map((project) => ({
           ...project,
-          skills: project.skills.map((id) =>
+          skills: (project.skills || []).map((id) =>
             result.skills.find((skill) => skill.id === id)
           ),
+          technologies: project.technologies || [],
         }));
         setProjects(updatedProjects);
       } catch (error) {

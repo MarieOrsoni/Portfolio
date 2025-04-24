@@ -1,16 +1,22 @@
 import { useContext } from "react";
 import { LanguageContext } from "../../context/language/Language-context";
+import britFlag from "./../../assets/brit_flag.png";
+import frenchFlag from "./../../assets/french_flag.png";
+
 import "./../../index.css";
 
 function NavBar() {
   const { language, toggleLanguage } = useContext(LanguageContext);
-  
 
   return (
     <nav className="nav">
-      <h1>{language === "fr" ? "Bienvenue" : "Welcome"}</h1>
-      <button onClick={toggleLanguage}>
-        {language === "en" ? "English" : "Francais"}
+      <p>{language === "fr" ? "Bienvenue" : "Welcome"}</p>
+      <button className="btn_flags" onClick={toggleLanguage}>
+        <img
+          className="flags"
+          src={language === "en" ? frenchFlag : britFlag}
+          alt={language === "en" ? "Français" : "English"}
+        />
       </button>
     </nav>
   );
