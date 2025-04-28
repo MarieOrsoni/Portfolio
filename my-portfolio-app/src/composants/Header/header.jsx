@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import { LanguageContext } from "../../context/language/Language-context";
-import NavBar from "../nav-bar/navBar";
 
 import "../../index.css";
 
@@ -25,7 +24,6 @@ function IntroHeader() {
 
   return (
     <header className="Header-container">
-      <NavBar />
       <h1 className="header-job">
         {letters.map((char, index) => (
           <span

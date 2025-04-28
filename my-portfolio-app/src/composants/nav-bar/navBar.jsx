@@ -6,18 +6,32 @@ import frenchFlag from "./../../assets/french_flag.png";
 import "./../../index.css";
 
 function NavBar() {
-  const { language, toggleLanguage } = useContext(LanguageContext);
+  const { language, setLanguage } = useContext(LanguageContext);
 
   return (
     <nav className="nav">
+      <div className="welcome"> 
       <p>{language === "fr" ? "Bienvenue" : "Welcome"}</p>
-      <button className="btn_flags" onClick={toggleLanguage}>
-        <img
-          className="flags"
-          src={language === "en" ? frenchFlag : britFlag}
-          alt={language === "en" ? "Français" : "English"}
-        />
-      </button>
+      </div>
+      <div className="language-selection">
+        <p className="lang-label">
+          {language === "fr" ? "Choisissez une langue" : "Choose a language"}
+        </p>
+      </div>
+      <div className="lang-btn">
+        <button
+          className={`flags-btn ${language === "en" ? "active" : ""}`}
+          onClick={() => setLanguage("en")}
+        >
+          <img className="flags" src={britFlag} alt="English" />
+        </button>
+        <button
+          className={`flags-btn ${language === "fr" ? "active" : ""}`}
+          onClick={() => setLanguage("fr")}
+        >
+          <img className="flags" src={frenchFlag} alt="Français" />
+        </button>
+      </div>
     </nav>
   );
 }
