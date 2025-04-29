@@ -33,6 +33,7 @@ ul li {
   display: flex;
   flex-direction: row-reverse;
   align-items: baseline;
+  background: #e0e1e8;
 }
 
 .Header-container {
@@ -45,7 +46,7 @@ ul li {
 }
 
 .header-job {
-  font-size: clamp(30px, 5vw, 60px);
+  font-size: clamp(25px, 5vw, 60px);
   margin-left: 30px;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -54,7 +55,7 @@ ul li {
   background: linear-gradient(to bottom, #665c8a 0%, #8d85ad 69%);
   -webkit-background-clip: text;
   background-clip: text;
-
+  margin: 15px 30px;
   text-shadow: 2px 2px 4px #a9a3c2;
   opacity: 0;
   transform: translateX(-100vw);
@@ -100,41 +101,41 @@ ul li {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 10px 30px;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 100%;
+  background: #e0e1e8;
+  gap: 12px;
 }
-.welcome {
+/*.welcome {
   font-weight: 400;
   font-size: 1.2rem;
   text-align: center;
   margin: 0;
-}
+}*/
 .language-selection {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .lang-label {
-  font-size: 0.9rem;
-  margin-bottom: 8px;
+  font-size: 10px;
   color: #333;
 }
 .lang-btn {
   display: flex;
   gap: 12px;
   align-items: center;
+  margin-right: 30px;
 }
 .flags {
-  /*overflow: hidden;
-  width: 20px;
-  height: 20px;
+  overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: center;*/
+  justify-content: center;
   object-fit: cover;
-  width: 30px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
+  margin-bottom: 5px;
 }
 
 .flags-btn {
@@ -148,7 +149,7 @@ ul li {
 .flags-btn.active {
   opacity: 1;
   transform: scale(1.1);
-  border-bottom: 2px solid #ad8b39;
+  border-bottom: 2px solid #ac0649;
 }
 /*main */
 main {

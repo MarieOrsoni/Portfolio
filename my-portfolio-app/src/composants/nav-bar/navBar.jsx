@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { LanguageContext } from "../../context/language/Language-context";
-import britFlag from "./../../assets/brit_flag.png";
+import britFlag from "./../../assets/brit-flag-round.png";
 import frenchFlag from "./../../assets/french_flag.png";
 
 import "./../../index.css";
@@ -10,9 +10,6 @@ function NavBar() {
 
   return (
     <nav className="nav">
-      <div className="welcome"> 
-      <p>{language === "fr" ? "Bienvenue" : "Welcome"}</p>
-      </div>
       <div className="language-selection">
         <p className="lang-label">
           {language === "fr" ? "Choisissez une langue" : "Choose a language"}
