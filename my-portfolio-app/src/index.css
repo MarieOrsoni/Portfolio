@@ -1,3 +1,53 @@
+:root {
+  --background: #e0e1e8;
+  --text: #2c293d;
+  --accent: #665c8a;
+  --accent-hover: #8d85ad;
+  --button-bg: #4a767d;
+  --button-hover: #5e9196;
+  --header-shadow: #a9a3c2;
+  --header-text: #8076a3;
+  --text-header: #333;
+  --active-underline: #ac0649;
+  --title-bg: linear-gradient(to bottom, #665c8a 0%, #8d85ad 69%);
+  --bg-gradient: linear-gradient(180deg, #958198, #ad9cb0);
+  --box-shadow: 2px 5px 5px #7c667f;
+  --bg-gradient-hover: linear-gradient(180g, #ad9cb0, #958198);
+  --box-shadow-hover: 4px 8px 8px #7c667f;
+  --bg-gradient-active: inear-gradient(180deg, #b5a8b8, #958198);
+  --box-shadow-active: box-shadow: 4px 8px 10px #7c667f;
+  --bg-modal: #fff;
+  --bg-backdrop-modal: rgba(0, 0, 0, 0.2);
+  --bg-modal-close:rgba(0, 0, 0, 0.5);
+  --bg-x-modal-open: #519464;
+  --link-hover: black;
+}
+
+[data-theme="dark"] {
+  --background: #1c1a23;
+  --text: #f5f4ed;
+  --accent: #bfa25a;
+  --accent-hover: #d9bd7c;
+  --button-bg: #3d3a4f;
+  --button-hover: #4a4465;
+  --header-shadow: #111015;
+  --header-text: #c5b783;
+  --text-header: #e0d9b5;
+  --active-underline: #e3c978;
+  --title-bg: linear-gradient(to bottom, #bfa25a 0%, #8c7942 69%);
+  --bg-gradient: linear-gradient(180deg, #282432, #403a4d);
+  --box-shadow: 2px 5px 5px #141218;
+  --bg-gradient-hover: linear-gradient(180deg, #403a4d, #282432);
+  --box-shadow-hover: 4px 8px 8px #1f1c29;
+  --bg-gradient-active: linear-gradient(180deg, #504a66, #282432);
+  --box-shadow-active: 4px 8px 10px #1f1c29;
+  --bg-modal: #2b2738;
+  --bg-backdrop-modal: rgba(0, 0, 0, 0.7);
+  --bg-modal-close: rgba(255, 215, 0, 0.2);
+  --bg-x-modal-open: #665c8a;
+  --link-hover: #f7e8a4;
+}
+
 body {
   max-width: 1440px;
   font-family: roboto;
@@ -8,7 +58,8 @@ body {
 }
 html,
 body {
-  transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in;
+
 }
 h1 {
   font-size: 24px;
@@ -33,13 +84,13 @@ ul li {
   display: flex;
   flex-direction: row-reverse;
   align-items: baseline;
-  background: #e0e1e8;
+  background: var(--background); 
 }
 
 .Header-container {
   display: flex;
   justify-content: space-between;
-  background: #e0e1e8;
+  background: var(--background);
   width: 100%;
   align-items: center;
   flex-direction: row;
@@ -51,12 +102,12 @@ ul li {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: #665c8a;
-  background: linear-gradient(to bottom, #665c8a 0%, #8d85ad 69%);
+  color: var(--accent);
+  background: var(--title-bg);
   -webkit-background-clip: text;
   background-clip: text;
   margin: 15px 30px;
-  text-shadow: 2px 2px 4px #a9a3c2;
+  text-shadow: 2px 2px 4px var(--header-shadow);
   opacity: 0;
   transform: translateX(-100vw);
   animation: slideFromLeft 2.5s ease-out forwards;
@@ -103,7 +154,8 @@ ul li {
   align-items: center;
   justify-content: flex-end;
   width: 100%;
-  background: #e0e1e8;
+  /*background: #e0e1e8;*/
+  background: var(--background);
   gap: 12px;
 }
 /*.welcome {
@@ -119,7 +171,8 @@ ul li {
 }
 .lang-label {
   font-size: 10px;
-  color: #333;
+  /*color: #333;*/
+  color: var(--text-header);
 }
 .lang-btn {
   display: flex;
@@ -149,7 +202,7 @@ ul li {
 .flags-btn.active {
   opacity: 1;
   transform: scale(1.1);
-  border-bottom: 2px solid #ac0649;
+  border-bottom: 2px solid var(--active-underline);
 }
 /*main */
 main {
@@ -172,7 +225,8 @@ main {
 /*About me*/
 
 .message-header {
-  color: #8076a3;
+  /*color: #8076a3;*/
+  color: var(--header-text);
   text-align: center;
   font-size: 26px;
 }
@@ -208,14 +262,16 @@ main {
 .skill-item {
   justify-content: space-between;
   padding: 0 10px;
-  background: linear-gradient(180deg, #958198, #ad9cb0);
-  box-shadow: 2px 5px 5px #7c667f;
+  /*background: linear-gradient(180deg, #958198, #ad9cb0);
+  box-shadow: 2px 5px 5px #7c667f;*/
+  background: var(--bg-gradient);
+  box-shadow: var(--box-shadow);
   border-radius: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
   cursor: pointer;
-  color: white;
+  color: var(--bg-modal);
   gap: 0.5rem;
   font-size: 10px;
 }
@@ -225,12 +281,16 @@ main {
 
 .skill-item:hover {
   transform: scale(1.06);
-  background: linear-gradient(180deg, #ad9cb0, #958198);
-  box-shadow: 4px 8px 8px #7c667f;
+  /*background: linear-gradient(180deg, #ad9cb0, #958198);
+  box-shadow: 4px 8px 8px #7c667f;*/
+  background: var(--bg-gradient-hover);
+  box-shadow: var(--box-shadow-hover);
 }
 .skill-item.active {
-  background: linear-gradient(180deg, #b5a8b8, #958198);
-  box-shadow: 4px 8px 10px #7c667f;
+  /*background: linear-gradient(180deg, #b5a8b8, #958198);
+  box-shadow: 4px 8px 10px #7c667f;*/
+  background: var(--bg-gradient-active);
+  box-shadow: var(--box-shadow-active);
   transform: scale(1.07);
   font-weight: bold;
 }
@@ -242,7 +302,8 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.2);
+ /* background: rgba(0, 0, 0, 0.2);*/
+ background: var(--bg-backdrop-modal);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -252,7 +313,8 @@ main {
 }
 
 .modal-content {
-  background: #fff;
+  /*background: #fff;*/
+  background: var(--bg-modal);
   border-radius: 10px;
   max-width: 90%;
   width: 90%;
@@ -274,7 +336,8 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  /*background-color: rgba(0, 0, 0, 0.5);*/
+  background-color: var(--bg-modal-close);
   z-index: 999;
   opacity: 0;
   transition: opacity 0.5s ease;
@@ -285,27 +348,27 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
+  background-color: var(--bg-modal);
   padding: 2rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 10px var(--bg-backdrop-modal);
   z-index: 1000;
   width: 80%;
   max-width: 600px;
   border-radius: 10px;
 }
 .modal-open .photo {
-  border: 2px solid #ac0649;
+  border: 2px solid var(--active-underline);
   border-radius: 7px;
 }
 .modal-open .dot.dot {
-  background-color: white;
+  background-color: var(--bg-modal);
   border-radius: 50%;
   cursor: pointer;
-  border: 1px solid #ac0649;
+  border: 1px solid var(--active-underline);
 }
 .modal-open .dot.dot.active {
   border: 1px solid transparent;
-  background-color: #ac0649;
+  background-color: var(--active-underline);
 }
 
 .modal-open h2 {
@@ -323,8 +386,9 @@ main {
   right: 20px;
   top: 20px;
   padding: 15px;
-  background-color: #519464;
-  color: white;
+ /* background-color: #519464;*/
+ background: var(--bg-x-modal-open);
+  color: var(--bg-modal);
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -346,17 +410,20 @@ main {
   justify-content: space-between;
 }
 .project-link {
-  color: white;
+ /* color: white;*/
+ color: var(--bg-modal);
   text-decoration: none;
   font-weight: bold;
-  background-color: #519464;
+  /*background-color: #519464;*/
+  background-color: var(--bg-x-modal-open);
   padding: 10px;
   border-radius: 10px;
 }
 
 .project-link:hover {
   text-decoration: underline;
-  color: black;
+  /*color: black;*/
+  color: var(--link-hover);
 }
 
 /* Style your cards */
@@ -368,11 +435,12 @@ main {
 .cards {
   max-width: 100%;
   width: 100%;
-  background: white;
+  /*background: white;*/
+  background: var(--bg-modal);
   padding: 10px;
   min-height: 350px;
   height: auto;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 10px var(--bg-backdrop-modal);
   text-align: center;
   border-radius: 10px;
   margin-bottom: 16px;
@@ -410,7 +478,8 @@ main {
 }
 .fa-chevron-left,
 .fa-chevron-right {
-  color: #ac0649;
+ /* color: #ac0649;*/
+ color: var(--active-underline);
   cursor: pointer;
   position: absolute;
   bottom: -10px;
@@ -433,16 +502,17 @@ main {
   height: 10px;
   width: 10px;
   margin: 0 5px;
-  background-color: white;
+  background-color: var(--bg-modal);
   border-radius: 50%;
   cursor: pointer;
-  border: 1px solid #ac0649;
+  border: 1px solid var(--active-underline);
   transition: background-color 0.3s;
 }
 .pagination-dots .dot.active {
   display: inline-block;
   border: 1px solid transparent;
-  background-color: #ac0649;
+  /*background-color: #ac0649;*/
+  background-color: var(--active-underline);
   border-radius: 50%;
   transform: scale(1.3);
 }
