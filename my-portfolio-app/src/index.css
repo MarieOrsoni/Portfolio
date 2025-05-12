@@ -14,7 +14,7 @@
   --box-shadow: 2px 5px 5px #7c667f;
   --bg-gradient-hover: linear-gradient(180g, #ad9cb0, #958198);
   --box-shadow-hover: 4px 8px 8px #7c667f;
-  --bg-gradient-active: inear-gradient(180deg, #b5a8b8, #958198);
+  --bg-gradient-active: linear-gradient(180deg, #b5a8b8, #958198);
   --box-shadow-active: box-shadow: 4px 8px 10px #7c667f;
   --bg-modal: #fff;
   --bg-backdrop-modal: rgba(0, 0, 0, 0.2);
@@ -37,6 +37,7 @@
   --title-bg: linear-gradient(to bottom, #bfa25a 0%, #8c7942 69%);
   --bg-gradient: linear-gradient(180deg, #282432, #403a4d);
   --box-shadow: 2px 5px 5px #141218;
+
   --bg-gradient-hover: linear-gradient(180deg, #403a4d, #282432);
   --box-shadow-hover: 4px 8px 8px #1f1c29;
   --bg-gradient-active: linear-gradient(180deg, #504a66, #282432);
@@ -46,6 +47,8 @@
   --bg-modal-close: rgba(255, 215, 0, 0.2);
   --bg-x-modal-open: #665c8a;
   --link-hover: #f7e8a4;
+
+  --background-test: #312f3b;
 }
 
 body {
@@ -271,7 +274,7 @@ main {
   flex-direction: row;
   align-items: center;
   cursor: pointer;
-  color: var(--bg-modal);
+  color: var(--text);
   gap: 0.5rem;
   font-size: 10px;
 }
@@ -376,10 +379,12 @@ main {
   margin-top: 20px;
   text-align: center;
   padding-top: 5px;
+  color: var(--text);
 }
 .modal-open p {
   text-align: center;
   padding-bottom: 10px;
+  color: var(--text);
 }
 .modal-open .fa-x {
   position: fixed;
@@ -388,7 +393,7 @@ main {
   padding: 15px;
  /* background-color: #519464;*/
  background: var(--bg-x-modal-open);
-  color: var(--bg-modal);
+  color: var(--header-text);
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -400,18 +405,21 @@ main {
   padding-left: 10px;
   margin: 10px 0;
   line-height: 1.5rem;
+  color: var(--text);
 }
 .listTechModal li {
   margin-bottom: 5px;
   list-style: disc;
+  
 }
 .skill-icons {
   display: flex;
   justify-content: space-between;
+  color: var(--text);
 }
 .project-link {
  /* color: white;*/
- color: var(--bg-modal);
+ color: var(--text);
   text-decoration: none;
   font-weight: bold;
   /*background-color: #519464;*/
@@ -436,7 +444,9 @@ main {
   max-width: 100%;
   width: 100%;
   /*background: white;*/
-  background: var(--bg-modal);
+  /*test*/
+  background: var(--background-test);
+  /*background: var(--bg-modal); testing a lighter card bg to a darker body*/
   padding: 10px;
   min-height: 350px;
   height: auto;
@@ -462,10 +472,12 @@ main {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: var(--text);
 }
 .cards-description,
 .cards-date {
   margin: 10px 0;
+  color: var(--text);
 }
 .carousel {
   position: relative;
