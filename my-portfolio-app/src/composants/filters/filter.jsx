@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { LanguageContext } from "../../context/language/Language-context";
 import PropTypes from "prop-types";
 
 const Skills = ({ setSelectedSkill, selectedSkill }) => {
   const [skills, setSkills] = useState([]);
+  const { language } = useContext(LanguageContext);
 
   useEffect(() => {
     fetch("./dev-portfolio.json")
@@ -18,8 +20,7 @@ const Skills = ({ setSelectedSkill, selectedSkill }) => {
           className={`skill-item ${selectedSkill === null ? "active" : ""}`}
           onClick={() => setSelectedSkill(null)}
         >
-          {" "}
-          Tous
+          {language === "fr" ? "Tous" : "All"}
         </div>
         {skills.map((skill) => (
           <div

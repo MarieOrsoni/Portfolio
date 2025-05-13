@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { ThemeContext } from "./theme-context.jsx";
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
