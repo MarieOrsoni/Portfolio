@@ -25,14 +25,16 @@
           "url": "https://marieorsoni.github.io/P4-Ohmyfood",
           "technologies": [
             {
-              "name": "Dans ce projet j’ai découpée la maquette figma pour comprendre le fonctionnalités du site."
-            },
-            { "name": "Le site a été intégré en version mobile first " },
-            {
-              "name": "J’ai créé  et mis en place des animations en CSS, un loader, le cœur des favoris et la sélection des plats pour l’interaction les utilisateurs."
+              "name": "Découpage de la maquette Figma pour comprendre les fonctionnalités du site avant le développement."
             },
             {
-              "name": "La fiche de style a été écrite en SASS rendant le code réutilisable avec les thèmes."
+              "name": "Intégration du site en version mobile first pour une expérience optimisée sur smartphone."
+            },
+            {
+              "name": "Création d’animations interactives en CSS, incluant un loader, l’icône cœur pour les favoris, et l’animation de sélection des plats."
+            },
+            {
+              "name": "Écriture des styles avec SASS, rendant le code modulaire et réutilisable grâce aux thèmes."
             }
           ],
           "skills": [1, 3, 5]
@@ -41,7 +43,7 @@
           "id": 2,
           "title": "Kasa",
           "startDate": "2024",
-          "description": "Créez une application web de location immobilière avec React",
+          "description": "Développement d’une plateforme immobilière responsive avec React. Routage dynamique, gestion des erreurs, contenus dépliables et carrousel d’images.",
           "images": [
             "foto/kasa_hp.jpg",
             "foto/kasa_mob_1.jpg",
@@ -53,28 +55,26 @@
           "url": "https://github.com/MarieOrsoni/P7-Kasa",
           "technologies": [
             {
-              "name": "Dans ce projet j’ai intégré une maquette figma sur une application  React JS."
+              "name": "Application React initialisée avec Vite."
             },
             {
-              "name": "J’ai découpé la maquette en réfléchissant aux composants et leur interaction."
+              "name": "React Router pour la navigation et les pages d’erreur."
             },
             {
-              "name": "J’ai créé  et structuré une application avec React JS Vite."
+              "name": "Données JSON dynamiques pour les pages de logement."
             },
             {
-              "name": "J’ai créé un React Router pour gérer la navigation du site."
+              "name": "Composants personnalisés : Collapse, Carousel, page 404."
             },
-            {
-              "name": "J’ai simulé le code pour les appels d’api pour récupérer les  données d’un dossier JSON."
-            }
+            { "name": "Mise en page responsive en SCSS." }
           ],
-          "skills": [2, 3, 5]
+          "skills": [2, 3, 4, 5]
         },
         {
           "id": 3,
           "title": "Sophie Bluel",
           "startDate": "2024",
-          "description": "Créez une page web dynamique avec JavaScript",
+          "description": "Développement d’une page web interactive en JavaScript avec gestion du contenu dynamique et des fonctionnalités d’administration.",
           "images": [
             "foto/SophieBluel.jpg",
             "foto/SBAdmpage.jpg",
@@ -85,21 +85,59 @@
           "url": "https://github.com/MarieOrsoni/P6_Architecte_Bluel_Sophie",
           "technologies": [
             {
-              "name": "Afficher la galerie des travaux dynamiquement avec les données du backend"
-            },
-            { "name": "Créer un filtre pour la galerie" },
-            {
-              "name": "Utiliser la méthode Fetch pour faire les appels à l’api"
+              "name": "Affichage dynamique de la galerie des travaux à partir des données du backend."
             },
             {
-              "name": "Créer un modal de login et gérer les tokens avec Fetch"
+              "name": "Création d’un filtre par catégorie pour trier le contenu de la galerie."
             },
             {
-              "name": "Créer un modal pour que l’administrateur puisse ajouter et enlever les travaux dans l’api"
+              "name": "Utilisation de la méthode Fetch pour les appels à l’API (récupération et envoi de données)."
             },
-            { "name": "Gérer la déconnexion de la page administrateur" }
+            {
+              "name": "Développement d’un modal de connexion et gestion des tokens d’authentification avec Fetch."
+            },
+            {
+              "name": "Création d’un modal administrateur permettant l’ajout et la suppression de projets dans le backend."
+            },
+            {
+              "name": "Mise en place de la déconnexion pour l’interface administrateur."
+            }
           ],
           "skills": [4, 5, 1]
+        },
+        {
+          "id": 4,
+          "title": "SEO Optimization - Nina Carducci",
+          "startDate": 2024,
+          "description": "Optimisation globale des performances et du référencement d’un site web, incluant accessibilité, SEO local, balises sociales et audit complet.",
+          "images": [
+            "foto/NC_lighthouse_report_compare.png",
+            "foto/NC_Meta_tag_in_html_code.png",
+            "foto/NC_Meta_tag_report.png",
+            "foto/NC_Wave_report.png"
+          ],
+          "url": "https://github.com/MarieOrsoni/P8-Nina-Carducci",
+          "technologies": [
+            {
+              "name": "Réalisation d’un audit SEO et accessibilité avec Lighthouse et Wave"
+            },
+            {
+              "name": "Compression des images pour améliorer le temps de chargement"
+            },
+            {
+              "name": "Ajout de balises meta pour les réseaux sociaux (Open Graph, Twitter Cards)"
+            },
+            {
+              "name": "Intégration de données structurées avec Schema.org"
+            },
+            {
+              "name": "Amélioration de l’accessibilité du code HTML"
+            },
+            {
+              "name": "Rédaction d’un rapport d’optimisation avec résultats avant/après"
+            }
+          ],
+          "skills": [1, 4]
         }
       ]
     },
@@ -127,11 +165,126 @@
             "foto/omyf_menu_mobile.jpg",
             "foto/ohmf_computer.jpg"
           ],
+          "url": "https://marieorsoni.github.io/P4-Ohmyfood",
+          "technologies": [
+            {
+              "name": "Analyzed the Figma design to understand the site’s functionality before development."
+            },
+            {
+              "name": "Built the website using a mobile-first approach to ensure optimal experience on smartphones."
+            },
+            {
+              "name": "Implemented interactive CSS animations, including a loading spinner, a heart icon for favorites, and animated dish selection."
+            },
+            {
+              "name": "Wrote the stylesheets in SASS, making the code modular and theme-friendly for reusability."
+            }
+          ],
           "skills": [1, 3, 5]
+        },
+        {
+          "id": 2,
+          "title": "Kasa",
+          "startDate": "2024",
+          "description": "Developed a fully responsive real estate platform using React. Implemented dynamic routing, error handling, collapsible content, and an image carousel.",
+          "images": [
+            "foto/kasa_hp.jpg",
+            "foto/kasa_mob_1.jpg",
+            "foto/kasa_mob2.jpg",
+            "foto/kasa_mob3.jpg",
+            "foto/kasa_pc.jpg",
+            "foto/kasaApt.jpg"
+          ],
+          "url": "https://github.com/MarieOrsoni/P7-Kasa",
+          "technologies": [
+            {
+              "name": "React app initialized with Vite"
+            },
+            {
+              "name": "React Router for page navigation and error management"
+            },
+            {
+              "name": "Dynamic routes for property pages using JSON data"
+            },
+            {
+              "name": "Custom components: Collapse, Carousel, Error page"
+            },
+            {
+              "name": "SCSS for responsive styling and layout"
+            }
+          ],
+          "skills": [2, 3, 4, 5]
+        },
+        {
+          "id": 3,
+          "title": "Sophie Bluel",
+          "startDate": "2024",
+          "description": "Developed an interactive web page using JavaScript, featuring dynamic content and admin functionalities.",
+          "images": [
+            "foto/SophieBluel.jpg",
+            "foto/SBAdmpage.jpg",
+            "foto/SBmodal.jpg",
+            "foto/SBmodalAjout.jpg",
+            "foto/SBmodalphoto.jpg"
+          ],
+          "url": "https://github.com/MarieOrsoni/P6_Architecte_Bluel_Sophie",
+          "technologies": [
+            {
+              "name": "Displayed the project gallery dynamically using data retrieved from the backend."
+            },
+            {
+              "name": "Created a category-based filter to sort the gallery content."
+            },
+            {
+              "name": "Used the Fetch API to communicate with the backend and retrieve or send data."
+            },
+            {
+              "name": "Built a login modal and handled authentication tokens using Fetch."
+            },
+            {
+              "name": "Developed an admin modal allowing the administrator to add or remove projects from the backend."
+            },
+            {
+              "name": "Implemented a logout feature for the administrator interface."
+            }
+          ],
+          "skills": [4, 5, 1]
+        },
+        {
+          "id": 4,
+          "title": "SEO Optimization - Nina Carducci",
+          "startDate": 2024,
+          "description": "Full website optimization project covering performance, accessibility, local SEO, social media tags, and a detailed audit report.",
+          "images": [
+            "foto/NC_lighthouse_report_compare.png",
+            "foto/NC_Meta_tag_in_html_code.png",
+            "foto/NC_Meta_tag_report.png",
+            "foto/NC_Wave_report.png"
+          ],
+          "url": "https://github.com/MarieOrsoni/P8-Nina-Carducci",
+          "technologies": [
+            {
+              "name": "Performance audit using Lighthouse"
+            },
+            {
+              "name": "Local SEO implementation with Schema.org"
+            },
+            {
+              "name": "Meta tags for social media (Open Graph, Twitter Cards)"
+            },
+            {
+              "name": "Accessibility improvements (contrast, ARIA labels, keyboard navigation)"
+            },
+            {
+              "name": "Optimization report summarizing all actions and their impact"
+            }
+          ],
+          "skills": [1, 4]
         }
       ]
     }
   },
+
   "skills": [
     {
       "id": 1,
