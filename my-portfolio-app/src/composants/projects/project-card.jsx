@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+
 import Card from "../cards/cards";
 import Modal from "../modal/card-modal";
 import Skills from "../filters/filter";
-
 import UseLanguage from "../../context/language/use-LanguageHook.jsx";
+
 import "./../../index.css";
 
 function MyProjects() {
@@ -62,7 +63,9 @@ function MyProjects() {
 
   return (
     <div className="projects">
-      <h2 className="project-title">Mes projets</h2>
+      <h2 className="project-title">
+        {language === "fr" ? "Mes projets" : "My projects"}
+      </h2>
       <div className="filter-and-skills">
         <Skills
           setSelectedSkill={setSelectedSkill}

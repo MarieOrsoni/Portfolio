@@ -1,10 +1,12 @@
 import PropTypes from "prop-types";
+import { useContext, useEffect, useState } from "react";
+import { LanguageContext } from "../../context/language/Language-context";
 import Carousel from "../carousel/displayimg";
 import "./../../index.css";
-import { useEffect, useState } from "react";
 
 function Modal({ project, onClose, isVisible }) {
   const [animationClass, setAnimationClass] = useState("");
+  const { language } = useContext(LanguageContext);
 
   useEffect(() => {
     if (isVisible) {
@@ -53,7 +55,7 @@ function Modal({ project, onClose, isVisible }) {
                 rel="noopener noreferrer"
                 className="project-link"
               >
-                Voir le projet
+                {language === "fr" ? "Voir le projet" : "View the project"}
               </a>
             </p>
           )}

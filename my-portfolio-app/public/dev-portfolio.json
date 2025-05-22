@@ -46,11 +46,12 @@
           "description": "Développement d’une plateforme immobilière responsive avec React. Routage dynamique, gestion des erreurs, contenus dépliables et carrousel d’images.",
           "images": [
             "foto/kasa_hp.jpg",
+            "foto/kasa_apt.jpg",
             "foto/kasa_mob_1.jpg",
             "foto/kasa_mob2.jpg",
             "foto/kasa_mob3.jpg",
-            "foto/kasa_pc.jpg",
-            "foto/kasaApt.jpg"
+
+            "foto/Kasa_a_propos.png"
           ],
           "url": "https://github.com/MarieOrsoni/P7-Kasa",
           "technologies": [
@@ -108,7 +109,7 @@
         {
           "id": 4,
           "title": "SEO Optimization - Nina Carducci",
-          "startDate": 2024,
+          "startDate": "2024",
           "description": "Optimisation globale des performances et du référencement d’un site web, incluant accessibilité, SEO local, balises sociales et audit complet.",
           "images": [
             "foto/NC_lighthouse_report_compare.png",
@@ -189,11 +190,12 @@
           "description": "Developed a fully responsive real estate platform using React. Implemented dynamic routing, error handling, collapsible content, and an image carousel.",
           "images": [
             "foto/kasa_hp.jpg",
+            "foto/kasa_apt.jpg",
             "foto/kasa_mob_1.jpg",
             "foto/kasa_mob2.jpg",
             "foto/kasa_mob3.jpg",
-            "foto/kasa_pc.jpg",
-            "foto/kasaApt.jpg"
+
+            "foto/Kasa_a_propos.png"
           ],
           "url": "https://github.com/MarieOrsoni/P7-Kasa",
           "technologies": [
@@ -253,7 +255,7 @@
         {
           "id": 4,
           "title": "SEO Optimization - Nina Carducci",
-          "startDate": 2024,
+          "startDate": "2024",
           "description": "Full website optimization project covering performance, accessibility, local SEO, social media tags, and a detailed audit report.",
           "images": [
             "foto/NC_lighthouse_report_compare.png",

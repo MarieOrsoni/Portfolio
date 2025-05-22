@@ -6,6 +6,12 @@ function BottomPage() {
   const { theme, toggleTheme } = useContext(ThemeContext);
   return (
     <footer className="footer">
+      <div className="contact-details">
+        <p className="email">
+          Contact:{" Marie Orsoni"}
+          <a href="mailto:m.orsoni20220@gmail.com">m.orsoni20220@gmail.com</a>
+        </p>
+      </div>
       <div className="icons-container">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" />
 
