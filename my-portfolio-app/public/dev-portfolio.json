@@ -16,7 +16,7 @@
           "id": 1,
           "title": "Ohmyfood",
           "startDate": "2024",
-          "description": " Créer un site « mobile first » en HTML et des animations CSS",
+          "description": "Création d’un site mobile first à partir d’une maquette Figma, avec intégration HTML/CSS, animations interactives en CSS (loader, cœur, sélection de plats), et feuille de style écrite en SASS pour un code structuré et réutilisable.",
           "images": [
             "foto/omf_mobile.jpg",
             "foto/omyf_menu_mobile.jpg",
@@ -163,7 +163,7 @@
           "id": 1,
           "title": "Ohmyfood",
           "startDate": "2024",
-          "description": "Create a mobile first website in HTML with CSS animations",
+          "description": "Developed a mobile-first website from a Figma mockup using HTML and CSS, featuring interactive CSS animations (loading spinner, favorite heart, dish selection), and wrote modular stylesheets in SASS for maintainable, theme-ready code.",
           "images": [
             "foto/omf_mobile.jpg",
             "foto/omyf_menu_mobile.jpg",
