@@ -8,7 +8,7 @@ function IntroHeader() {
   const [letters, setLetters] = useState([]);
 
   useEffect(() => {
-    const text = content?.info?.title || "Développeuse web";
+    const text = content?.info?.title || "Marie Services Linguistiques et web";
     setLetters(text.split(""));
   }, [content]);
   console.log("Full context value:", useContext(LanguageContext));
